@@ -3,7 +3,10 @@ const cors = require('cors');
 const app = express();
 const contactRouter = require('./app/routes/contac.route')
 const ApiError = require('./app/api-error');
+const db = require('./database/db');
 
+// db 
+db.connect();
 // port
 require('dotenv').config();
 const port = process.env.PORT;
